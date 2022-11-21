@@ -1,0 +1,88 @@
+body {
+  user-select: none;
+  height: 100vh;
+  background: #0F2027;
+  background: linear-fradient(120deg, #2C5365, #203A43, #0F2027);
+  font-family: 'Jua', sans-serif;
+}
+
+.hover_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hover_wrap figure {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hover_wrap figure img {
+  display: block;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.hover_wrap figure:hover img{
+  opacity: 0.1;
+}
+
+.hover_wrap figcaption {
+  position: absolute;
+  top:0; right: 0; left: 0; bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover_wrap figcaption::before {
+  content: '';
+  width: 150px;
+  height: 150px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover_wrap figcaption strong {
+  color: #fff;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* media query */
+@media (max-width: 800px) {
+  .hover_wrap {flex-direction: column;}
+}
+
+/* 원 굴리기 1 */
+.hover_wrap .hover5 figcaption {
+  transform: translatex(80%) rotate(180deg);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap .hover5:hover figcaption {
+  transform: translatex(0%) rotate(0deg);
+}
+
+/* 원 굴리기 2 */
+.hover_wrap .hover6 figcaption {
+  transform: translatex(-80%) rotate(-180deg);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap .hover6:hover figcaption {
+  transform: translatex(0%) rotate(0deg);
+}
