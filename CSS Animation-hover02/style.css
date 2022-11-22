@@ -1,0 +1,86 @@
+body {
+  user-select: none;
+  height: 100vh;
+  background: linear-fradient(120deg, #2C5365, #203A43, #0F2027);
+  font-family: 'Jua', sans-serif;
+}
+
+.hover_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.hover_wrap .effect {
+  position: relative;
+  width: 400px; height: 300px; margin: 10px;
+}
+
+.hover_wrap .effect img {
+  width: 100%; display: block;
+}
+
+.hover_wrap .effect .front {
+  position: absolute; left: 0; top: 0; z-index: 10;
+}
+.hover_wrap .effect .back {
+  position: absolute; left: 0; top: 0;
+}
+
+.hover_wrap .effect figcaption {
+  position: absolute; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%; padding: 3% 4%;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.hover_wrap .effect figcaption h3 {
+  font-size: 24px; padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.hover_wrap .effect figcaption p {
+  font-size: 20px;
+}
+
+/* media query */
+@media (max-width: 800px) {
+  .hover_wrap {flex-direction: column;}
+}
+
+/* hover effect 1 */
+.hover_wrap .effect.hover7 .front {
+  transform: rotatey(0deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+}
+.hover_wrap .effect.hover7:hover .front {
+  transform: rotatey(180deg);
+}
+.hover_wrap .effect.hover7 .back {
+  transform: rotatey(-180deg);
+  transition: all 1s;
+}
+.hover_wrap .effect.hover7:hover .back {
+  transform: rotatey(0deg);
+}
+
+/* hover effect 1 */
+.hover_wrap .effect.hover8 .front {
+  transform: rotatex(0deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+}
+.hover_wrap .effect.hover8:hover .front {
+  transform: rotatex(180deg);
+}
+.hover_wrap .effect.hover8 .back {
+  transform: rotatex(-180deg);
+  transition: all 1s;
+}
+.hover_wrap .effect.hover8:hover .back {
+  transform: rotatex(0deg);
+}
