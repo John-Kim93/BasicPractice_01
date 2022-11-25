@@ -1,0 +1,71 @@
+body {
+  user-select: none;
+  height: 100vh;
+  background: linear-fradient(120deg, #2C5365, #203A43, #0F2027);
+  font-family: 'Jua', sans-serif;
+}
+
+.hover_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hover_wrap figure {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #874da2, #c43a30);
+}
+
+.hover_wrap figure::before {
+  content: '';
+  position: absolute;
+  width: 60px; height: 1px;
+  background: #fff;
+  left: 100%; top: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.hover_wrap figure:hover::before {
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.hover_wrap figure::after {
+  content: '';
+  position: absolute;
+  width: 1px; height: 60px;
+  background: #fff;
+  left: 50%; top: -20%;
+  z-index: 1;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.hover_wrap figure:hover::after {
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.hover_wrap figure img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* media query */
+@media (max-width: 800px) {
+  .hover_wrap {flex-direction: column;}
+}
+
+.hover_wrap figure.hover3:hover img {
+  opacity: 0.6;
+}
+
+.hover_wrap figure.hover4:hover img {
+  opacity: 0.6;
+}
